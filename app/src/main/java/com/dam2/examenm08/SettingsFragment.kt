@@ -1,9 +1,6 @@
 package com.dam2.examenm08
 
-import android.content.Context
 import android.content.Context.MODE_PRIVATE
-import android.content.SharedPreferences
-import android.content.SharedPreferences.Editor
 import android.content.res.Configuration
 import android.content.res.Resources
 import android.os.Bundle
@@ -22,7 +19,7 @@ import java.util.*
 
 class SettingsFragment : Fragment() {
 
-    private lateinit var btnIdioma: ToggleButton;
+    private lateinit var btnIdioma: ToggleButton
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -32,8 +29,10 @@ class SettingsFragment : Fragment() {
         btnIdioma = v.findViewById(R.id.btnIdioma)
         val sharedPreference =
             requireContext().getSharedPreferences("PREFERENCE_NAME", MODE_PRIVATE)
-        val tgpref = sharedPreference.getBoolean("tgpref", false)
-        btnIdioma.isChecked = tgpref
+
+        if (sharedPreference.getString("lang", "").equals("en")) {
+            btnIdioma.toggle()
+        }
 
         btnIdioma.setOnClickListener {
             val localeCode: String
@@ -41,15 +40,9 @@ class SettingsFragment : Fragment() {
             if (btnIdioma.isChecked) {
                 Log.i("idioma", "English")
                 localeCode = "en"
-                val editor: Editor = sharedPreference.edit()
-                editor.putBoolean("tgpref", true)
-                editor.apply()
             } else {
                 localeCode = "ca"
                 Log.i("idioma", "Català")
-                val editor: Editor = sharedPreference.edit()
-                editor.putBoolean("tgpref", false)
-                editor.apply()
             }
             setAppLocale(localeCode)
         }
@@ -79,6 +72,7 @@ class SettingsFragment : Fragment() {
         return v
     }
 
+    @Suppress("DEPRECATION")
     private fun setAppLocale(localeCode: String) {
         val resources: Resources = resources
         val dm: DisplayMetrics = resources.displayMetrics

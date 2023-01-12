@@ -1,19 +1,22 @@
 val username = sharedPreference.getString("username", "")
 val password = sharedPreference.getString("password", "")
 
-val tgpref = sharedPreference.getBoolean("tgpref", false)
-        btnIdioma.isChecked = tgpref
-
 if (username == usernameET.text.toString() && password == passwordET.text.toString()) {
                     val intent = Intent(applicationContext, MainActivity::class.java)
                     startActivity(intent)
 }
 
-if (tgpref) {
-    btnIdioma.isChecked = true
-} else {
-    btnIdioma.isChecked = false
-}
+--------------
+
+val tgpref = sharedPreference.getBoolean("tgpref", false)
+
+ESTO -> btnIdioma.isChecked = tgpref
+ES IGUAL A
+ESTO -> if (tgpref) {
+            btnIdioma.isChecked = true
+        } else {
+            btnIdioma.isChecked = false
+        }
 
 if (btnIdioma.isChecked) {
         Log.i("idioma", "English")
