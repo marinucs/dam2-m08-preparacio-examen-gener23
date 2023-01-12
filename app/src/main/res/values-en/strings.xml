@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">JdA_Films</string>
+    <string name="menu_films">Films</string>
+    <string name="menu_add_film">Add movie</string>
+    <string name="menu_settings">Settings</string>
+    <string name="btnLogin">Login</string>
+    <string name="txtUsername">User</string>
+    <string name="txtPassword">Password</string>
+    <string name="nomPeli">Film title</string>
+    <string name="valoracioPeli">Rating</string>
+    <string name="categoriaPeli">Category</string>
+    <string name="idioma">Language</string>
+    <string name="removeAll">Delete all preferences</string>
+    <string name="catala">Catalan</string>
+    <string name="english">English</string>
+    <string name="credencials_ok">Valid credentials</string>
+    <string name="credencials_f">Invalid credentials</string>
+    <string name="no_blank_fields">Empty fields are not allowed</string>
+    <string name="save">Save</string>
+    <string name="clear">DELETE ALL</string>
+    <string name="totEliminat">You\'ve deleted all films</string>
+    <string name="resEliminat">No film has been deleted</string>
+    <string name="esborraPrefs">Are you sure about deleting all preferences?</string>
+    <string name="prefsNoEsborrades">Preferences NOT deleted</string>
+    <string name="prefsEsborrades">All preferences have been deleted</string>
+    <string name="ok">OK</string>
+    <string name="cancela">Cancel</string>
+    <string-array name="categories">
+        <item>Adventure</item>
+        <item>Terror</item>
+        <item>Sci-Fi</item>
+        <item>Comedy</item>
+    </string-array>
+</resources>

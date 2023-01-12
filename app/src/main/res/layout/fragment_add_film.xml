@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="20dp"
+    tools:context="com.dam2.examenm08.AddFilmFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/nomPeli" />
+
+            <EditText
+                android:id="@+id/txtNom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/nomPeli"
+                android:inputType="textPersonName"
+                tools:ignore="Autofill" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_rating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/ratingTxtView"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="@string/valoracioPeli" />
+
+            <EditText
+                android:id="@+id/ratingET"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/valoracioPeli"
+                android:inputType="number"
+                tools:ignore="Autofill"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/catTV"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="@string/categoriaPeli" />
+
+            <Spinner
+                android:id="@+id/catSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/save" />
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/clear" />
+
+    </LinearLayout>
+
+</FrameLayout>

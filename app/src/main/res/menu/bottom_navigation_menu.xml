@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_films"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_movie_filter_24"
+        android:title="@string/menu_films" />
+    <item
+        android:id="@+id/menu_add_film"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_playlist_add_24"
+        android:title="@string/menu_add_film" />
+
+    <item
+        android:id="@+id/menu_settings"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="@string/menu_settings" />
+</menu>
